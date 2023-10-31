@@ -1,7 +1,10 @@
 let particles = [];
 
 function setup() {
-  var canvas = createCanvas(windowWidth - 18, windowHeight);
+  const canvasContainer = document.getElementById("canvasContainer");
+  const containerWidth = canvasContainer.offsetWidth;
+  const containerHeight = canvasContainer.offsetHeight;
+  var canvas = createCanvas(containerWidth, containerHeight);
   canvas.parent("canvasContainer");
   background(80);
   for (let i = 0; i < 1; i++) {
@@ -98,5 +101,8 @@ function mouseMoved() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  const canvasContainer = document.getElementById("canvasContainer");
+  const containerWidth = canvasContainer.offsetWidth;
+  const containerHeight = canvasContainer.offsetHeight;
+  resizeCanvas(containerWidth, containerHeight);
 }
