@@ -1,0 +1,28 @@
+.opening {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #fff; */
+  z-index: 99;
+
+  & .progress-bar {
+    width: 200px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  & .wrapper {
+    z-index: 0;
+
+    & .strip-box {
+      flex: 1;
+      height: 100vh;
+      perspective: 1000px;
+    }
+  }
+
+  .strip {
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+  }
+}

@@ -1,0 +1,43 @@
+.header {
+  top: 0;
+  z-index: 9;
+  border-bottom: 1px solid $black;
+  background-color: rgba(209, 209, 207, 0.5);
+  backdrop-filter: blur(4px);
+
+  & .left {
+    border-right: 1px solid $black;
+    transition: all linear 0.3s;
+
+    &:hover {
+      & .title {
+        & > span {
+          transform: translateY(-100%);
+          transition: all linear 0.3s;
+        }
+
+        &::before {
+          transform: translateY(0%);
+          transition: all linear 0.3s;
+        }
+      }
+    }
+
+    & .title {
+      & > span {
+        transition: all linear 0.3s;
+      }
+
+      &::before {
+        content: "Kuan-Jen Chiu";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateY(100%);
+        transition: all linear 0.3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.sidebar {
+  width: 100vw;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 9;
+  background-color: #ccd2ca;
+
+  &-close {
+    border: 1px solid #666;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    top: 2%;
+    right: 20px;
+    color: #666;
+  }
+
+  & .link {
+    font-size: 10vw;
+    background-image: linear-gradient(#dcae18);
+    background-size: 0% 2%;
+    background-repeat: no-repeat;
+    background-position: 0 85%;
+    transition: all linear 0.3s;
+
+    &:hover {
+      background-size: 100% 2%;
+      transition: all linear 0.3s;
+    }
+  }
+}
