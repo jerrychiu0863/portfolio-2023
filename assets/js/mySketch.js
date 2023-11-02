@@ -31,7 +31,7 @@ function draw() {
   // }
 
   if (frameCount % 50 === 0 && windowWidth < 991) {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 3; i++) {
       particles.push(new Particle(random(width), random(height), 3));
     }
   }
