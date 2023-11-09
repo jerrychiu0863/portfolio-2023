@@ -7,6 +7,7 @@ $(function () {
   } else {
     // Remove opening overlay
     $(".opening").removeClass("d-flex").addClass("d-none");
+    $("body").removeClass("overflow-hidden");
   }
 
   function openingAnimation() {
