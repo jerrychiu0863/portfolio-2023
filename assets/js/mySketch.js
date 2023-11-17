@@ -1,4 +1,5 @@
 let particles = [];
+let noiseGra;
 
 function setup() {
   const canvasContainer = document.getElementById("canvasContainer");
@@ -11,6 +12,19 @@ function setup() {
     particles.push(new Particle(random(width), random(height)));
   }
   colorMode(HSB, 360);
+  // Noise texture
+  noiseGra = createGraphics(windowWidth, windowHeight);
+  noiseGra.loadPixels();
+  for (let x = 0; x <= width; x++) {
+    for (let y = 0; y <= height; y++) {
+      noiseGra.set(
+        x,
+        y,
+        color(255, noise(x / 10, y / 10, (x * y) / 50) * random([0, 20, 50]))
+      );
+    }
+  }
+  noiseGra.updatePixels();
 }
 
 function draw() {
@@ -84,6 +98,7 @@ function draw() {
       );
     }
   }
+  image(noiseGra, 0, 0);
 }
 
 function mouseDragged() {
